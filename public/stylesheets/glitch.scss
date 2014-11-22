@@ -1,0 +1,139 @@
+$black_gamma: true;
+
+
+$bg: if($black_gamma, #000, #fff); 
+$text: if($black_gamma, #fff, #000); 
+
+$steps: 60;
+$time : 3s;
+$floating: 5px;
+$mainscene: 300px;
+$dot_size: 90px;
+
+body {
+	background-color: $bg;
+}
+.title p {
+	color: $text; 
+}
+// main-scene one dot
+// .main-scene, .second-scene {
+// 	height: $mainscene;
+// 	line-height: $mainscene;
+// 	-webkit-transition: all 1s;
+// 	-moz-transition: all 1s;
+// 	transition: all 1s;
+// }
+.dot {
+	background-color: $text;
+	-webkit-transition: all 1s 0.3s cubic-bezier(.71,.05,.44,1.5);
+	-moz-transition: all 1s 0.3s cubic-bezier(.71,.05,.44,1.5);
+	transition: all 1s 0.3s cubic-bezier(.71,.05,.44,1.5);
+}
+// second scene three parts of dot
+.second-scene div[class*=dot-] {
+	height: $dot_size;
+	width: $dot_size;
+	background: $text;
+	border-radius: 50%;
+	float: left;
+	position: absolute;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
+}
+
+.centrifyer.dot-big .dot {
+	height: $dot_size;
+	width: $dot_size;
+}
+
+@mixin main($diff) {
+	@at-root {
+		@for $i from 0 through $steps {
+	    	#{percentage($i*(1/$steps))} {
+	      		clip:rect(random($diff)+px,9999px,random($diff)+px,0);
+	    	}
+		}
+  	}
+}
+.web::before {
+	left: -$floating/2;
+    text-shadow: -1px 0 blue;
+  	-webkit-animation: glitch-anim-mini-2 $time infinite linear alternate-reverse;
+  	-moz-animation: glitch-anim-mini-2 $time infinite linear alternate-reverse;
+  	animation: glitch-anim-mini-2 $time infinite linear alternate-reverse;
+    
+    background: $bg;
+	// clip: rect(44px, 450px, 56px, 0);
+}
+.web::after {
+	left: $floating/2;
+    text-shadow: 1px 0 red;
+  	-webkit-animation: glitch-anim-mini $time infinite linear alternate-reverse;
+  	-moz-animation: glitch-anim-mini $time infinite linear alternate-reverse;
+  	animation: glitch-anim-mini $time infinite linear alternate-reverse;
+    
+    background: $bg;
+	// clip: rect(70px, 450px, 100px, 0);
+}
+
+.terror::before {
+    left: $floating;
+    text-shadow: 2px 0 red;
+  	-webkit-animation: glitch-anim $time infinite linear alternate-reverse;
+  	-moz-animation: glitch-anim $time infinite linear alternate-reverse;
+  	animation: glitch-anim $time infinite linear alternate-reverse;
+    
+    background: $bg;
+	// clip: rect(70px, 450px, 100px, 0);
+}
+.terror::after {
+    left: -$floating;
+    text-shadow: -2px 0 blue;
+  	-webkit-animation: glitch-anim-2 $time infinite linear alternate-reverse;
+  	-moz-animation: glitch-anim-2 $time infinite linear alternate-reverse;
+  	animation: glitch-anim-2 $time infinite linear alternate-reverse;
+    
+    background: $bg;
+	// clip: rect(44px, 450px, 56px, 0);
+}
+
+@keyframes glitch-anim {
+  @include main(100px);
+}
+@keyframes glitch-anim-2 {
+  @include main(100px);
+}
+@-webkit-keyframes glitch-anim {
+  @include main(100px);
+}
+@-webkit-keyframes glitch-anim-2 {
+  @include main(100px);
+}
+@-moz-keyframes glitch-anim {
+  @include main(100px);
+}
+@-moz-keyframes glitch-anim-2 {
+  @include main(100px);
+}
+
+
+@keyframes glitch-anim-mini {
+  @include main(50px);
+}
+@keyframes glitch-anim-mini-2 {
+  @include main(50px);
+}
+@-webkit-keyframes glitch-anim-mini {
+  @include main(50px);
+}
+@-webkit-keyframes glitch-anim-mini-2 {
+  @include main(50px);
+}
+@-moz-keyframes glitch-anim-mini {
+  @include main(50px);
+}
+@-moz-keyframes glitch-anim-mini-2 {
+  @include main(50px);
+}
