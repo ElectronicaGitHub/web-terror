@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
-	var rus = window.navigator.language.match('ru');
+	var lang = window.navigator.language || window.navigator.userLanguage;
+
+	var rus = lang.match('ru');
 	if (rus) {
 		$('p.web').text('ВЕБ');
 		$('p.web').attr('data-glitch','ВЕБ');
