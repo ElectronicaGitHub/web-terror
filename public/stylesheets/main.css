@@ -29,7 +29,8 @@ body {
 	z-index: 2;
 }
 .title p {
-	font-family: 'lato-black';
+	font-family: 'Lato';
+    font-weight: 900;
 }
 .web {
 	font-size: 50px;
@@ -168,7 +169,8 @@ div[class*=screen-scrapper] {
     position: relative;
     margin: 0 auto;
     width: 400px;
-    font-family: 'lato-black';
+    font-family: 'Lato';
+    font-weight: 900;
     height: 50px;
     text-align: center;
     font-size: 50px;
@@ -179,7 +181,8 @@ div[class*=screen-scrapper] {
     margin: 0 auto;
     width: 400px;
     height: 50px;
-    font-family: 'lato-hairline';
+    font-weight: 200;
+    font-family: 'Lato';
     font-size: 20px;
     text-align: center;
     opacity: 0;
