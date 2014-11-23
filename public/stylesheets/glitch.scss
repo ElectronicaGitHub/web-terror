@@ -63,7 +63,7 @@ body {
   	-webkit-animation: glitch-anim-mini-2 $time infinite linear alternate-reverse;
   	-moz-animation: glitch-anim-mini-2 $time infinite linear alternate-reverse;
   	animation: glitch-anim-mini-2 $time infinite linear alternate-reverse;
-    
+    clip: rect(70px, 9999px, 50px, 0);
     background: $bg;
 	// clip: rect(44px, 450px, 56px, 0);
 }
@@ -73,7 +73,7 @@ body {
   	-webkit-animation: glitch-anim-mini $time infinite linear alternate-reverse;
   	-moz-animation: glitch-anim-mini $time infinite linear alternate-reverse;
   	animation: glitch-anim-mini $time infinite linear alternate-reverse;
-    
+    clip: rect(70px, 9999px, 50px, 0);
     background: $bg;
 	// clip: rect(70px, 450px, 100px, 0);
 }
@@ -84,7 +84,7 @@ body {
   	-webkit-animation: glitch-anim $time infinite linear alternate-reverse;
   	-moz-animation: glitch-anim $time infinite linear alternate-reverse;
   	animation: glitch-anim $time infinite linear alternate-reverse;
-    
+    clip: rect(70px, 9999px, 50px, 0);
     background: $bg;
 	// clip: rect(70px, 450px, 100px, 0);
 }
@@ -94,7 +94,7 @@ body {
   	-webkit-animation: glitch-anim-2 $time infinite linear alternate-reverse;
   	-moz-animation: glitch-anim-2 $time infinite linear alternate-reverse;
   	animation: glitch-anim-2 $time infinite linear alternate-reverse;
-    
+    clip: rect(70px, 9999px, 50px, 0);
     background: $bg;
 	// clip: rect(44px, 450px, 56px, 0);
 }
