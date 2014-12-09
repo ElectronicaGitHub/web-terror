@@ -140,12 +140,30 @@ var screenOff = function() {
                         $('.main-view-wtlabel').animate({
                             top : '-70px',
                             opacity : '1'
-                        }, 1000);
+                        }, 1000, function() {
+                            var phr = document.createElement('DIV');
+                            $(phr).text('Комплексные веб решения').addClass('cws');
+                            $('.main-view-wtlabel').append(phr);
+                            $(phr).animate({
+                                top : '-20px',
+                                opacity : 1
+                            }, 1000);
+                        });
                         $('.main-view-contacts').animate({
                             top: '-40px',
                             opacity : '1'
-                        }, 1000);
-                        // raphaelWorksMarkerAppear();
+                        }, 1000, function() {
+                            var works = document.createElement('DIV');
+                            $(works).text('Работы').addClass('works');
+                            $('.main-view-contacts').append(works);
+                            $(works).animate({
+                                top : '110px',
+                                opacity : 1
+                            }, 1000);
+                        });
+                        initCircles(250, function() {
+                            // callback after circles make big circle
+                        });
                     }, 1500)
                     $(div5).animate({
                         width: '5px',

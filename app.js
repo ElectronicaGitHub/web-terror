@@ -3,6 +3,7 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
+var session = require('cookie-session');
 var bodyParser = require('body-parser');
 var log = require('./configs/logger')(module);
 var config = require('./configs/config_file');
@@ -19,6 +20,13 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
+
+// app.set('trust proxy', 1) // trust first proxy
+
+app.use(session({
+    keys : ['hello', 'world']
+}));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', require('./routes/index.js')(express));
