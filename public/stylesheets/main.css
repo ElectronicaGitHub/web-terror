@@ -274,10 +274,7 @@ div[class*=screen-scrapper] {
 }
 .eachWork {
     width: 50%;
-    /*height: 350px;*/
     float: left;
-    /*line-height: 350px;*/
-    /*margin-bottom: 10px;*/
     background-size: cover;
     background-position: top center;
     opacity : 0;
@@ -295,4 +292,6 @@ div[class*=screen-scrapper] {
     font-size: 60px;
     font-weight: 900;
     color: white;
+    border: 10px solid white;
+    border-width: 10px 0 10px 0;
 }

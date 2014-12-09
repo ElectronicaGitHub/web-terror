@@ -34,17 +34,17 @@ var works = [
 
 $(document).ready(function() {
 
-	var lang = window.navigator.language || window.navigator.userLanguage;
+	// var lang = window.navigator.language || window.navigator.userLanguage;
 
-	var rus = lang.match('ru');
-	if (rus) {
-		$('p.web').text('ВЕБ');
-		$('p.web').attr('data-glitch','ВЕБ');
-		$('p.terror').text('ТЕРРОР');
-		$('p.terror').attr('data-glitch', 'ТЕРРОР');
-		$('.main-view-wtlabel').text('ВЕБ ТЕРРОР');
-		$('.main-view-contacts .phone').text('+7 909 6952723');
-	}
+	// var rus = lang.match('ru');
+	// if (rus) {
+	// 	$('p.web').text('ВЕБ');
+	// 	$('p.web').attr('data-glitch','ВЕБ');
+	// 	$('p.terror').text('ТЕРРОР');
+	// 	$('p.terror').attr('data-glitch', 'ТЕРРОР');
+	// 	$('.main-view-wtlabel').text('ВЕБ ТЕРРОР');
+	// 	$('.main-view-contacts .phone').text('+7 909 6952723');
+	// }
 
 	$('.title').animate({
 		opacity : 1
@@ -70,12 +70,12 @@ $(document).ready(function() {
 		// segue controller
 		var headerSegue = document.createElement('DIV');
 		var bodySegues = []; stripesN = 10;
-		for (var i=0;i< stripesN;i++) {
+		for (var i=0;i < stripesN;i++) {
 			bodySegues[i] = document.createElement('DIV');
 			$(bodySegues[i]).css({
 				left : i * 10 + '%',
 				// + 1 because of overlap bug
-				width : stripesN + 1 + '%'
+				width : i == (stripesN - 1) ? '10%' : stripesN + 1 + '%'
 			});
 			$('body').append(bodySegues[i]);
 
@@ -136,9 +136,12 @@ $(document).ready(function() {
 				worksArray[i] = document.createElement('DIV');
 				$(worksArray[i]).addClass('eachWork').css({
 					'background-image' : 'url( ' + works[i].background_url + ' )',
-					width : works[i].size == 1 ? '50%' : '100%',
-					height : works[i].size == 1 ? '350px' : '500px',
-					'line-height' : works[i].size == 1 ? '350px' : '500px'
+					// width : works[i].size == 1 ? '50%' : '100%',
+					width : '100%',
+					// height : works[i].size == 1 ? '350px' : '500px',
+					height : '550px',
+					// 'line-height' : works[i].size == 1 ? '350px' : '500px'
+					'line-height' : '550px'
 				});
 
 				var fader = document.createElement('DIV');
