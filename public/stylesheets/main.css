@@ -31,8 +31,8 @@ body {
     opacity: 0;
 }
 .title p {
-	font-family: 'Lato';
-    font-weight: 900;
+	font-family: 'LatoBlack', sans-serif;
+    /*font-weight: 900;*/
 }
 .web {
 	font-size: 50px;
@@ -171,8 +171,8 @@ div[class*=screen-scrapper] {
     position: relative;
     margin: 0 auto;
     width: 400px;
-    font-family: 'Lato';
-    font-weight: 900;
+    font-family: 'LatoBlack', sans-serif;
+    /*font-weight: 900;*/
     height: 50px;
     text-align: center;
     font-size: 50px;
@@ -183,8 +183,8 @@ div[class*=screen-scrapper] {
     margin: 0 auto;
     width: 400px;
     height: 50px;
-    font-weight: 300;
-    font-family: 'Lato';
+    font-family: 'LatoLight', sans-serif;
+    /*font-weight: 300;*/
     font-size: 18px;
     text-align: center;
     opacity: 0;
@@ -202,8 +202,8 @@ div[class*=screen-scrapper] {
     width: 100px;
     margin: 0 auto;
     height: 50px;
-    font-family: 'Lato';
-    font-weight: 300;
+    font-family: 'LatoLight', sans-serif;
+    /*font-weight: 300;*/
     font-size: 20px;
 }
 
@@ -213,8 +213,8 @@ div[class*=screen-scrapper] {
     width: 100%;
     font-size: 18px;
     opacity : 0;
-    font-family: 'Lato';
-    font-weight: 200;
+    font-family: 'LatoLight', sans-serif;
+    /*font-weight: 200;*/
 }
 .works {
     position: absolute;
@@ -222,11 +222,14 @@ div[class*=screen-scrapper] {
     width: 100%;
     opacity : 0;
     font-size: 22px;
-    font-family: 'Lato';
-    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    /*font-weight: 700;*/
     cursor: pointer;
 }
-/*// works start*/
+
+/*works Start*/
+
+
 .headerSegue {
     /*background-color: white;*/
     background-color: #111;
@@ -234,7 +237,6 @@ div[class*=screen-scrapper] {
     position: fixed; 
     top : 0;
     z-index: 5;
-    line-height: 80px;
     height: 0;
     color: white;
 }
@@ -253,7 +255,7 @@ div[class*=screen-scrapper] {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
-    font-family: 'Lato';
+    font-family: 'LatoBlack', sans-serif;
 }
 .worksCanvas {
     width: 100%;
@@ -263,7 +265,7 @@ div[class*=screen-scrapper] {
     top: 0;
     z-index: 4;
     text-align: center;
-    padding-top: 80px;
+    /*padding-top: 100px;*/
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
@@ -284,14 +286,23 @@ div[class*=screen-scrapper] {
 .eachWork > .fader {
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.6);
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+.eachWork:hover .fader {
+    background-color: rgba(0,0,0,.4);
+
 }
 
 .eachWork > .fader > span {
-    font-family: 'Lato';
+    font-family: 'LatoBlack', sans-serif;
     font-size: 60px;
-    font-weight: 900;
+    /*font-weight: 900;*/
     color: white;
     border: 10px solid white;
     border-width: 10px 0 10px 0;
+}
+.back {
+    font-family: 'LatoMedium'
 }

@@ -94,21 +94,20 @@ $(document).ready(function() {
 		var back = document.createElement('P');
 		$(wt).text('ВЕБ ТЕРРОР').css({
 			opacity : 0,
-			'font-size' : '30px',
-			'line-height': '30px',
-			'font-weight' : 900
+			'font-size' : '35px',
+			'line-height': '40px'
 		});
 		$(back).text('Вернуться').addClass('back').css({
 			opacity : 0,
 			'font-size' : '15px',
 			'line-height' : '20px',
-			'font-weight' : 500,
 			'padding-top' : '5px',
 			'cursor' : 'pointer'
 		});
 		$(wtLogoAndBack).addClass('wtLogoAndBack');
 		$(headerSegue).addClass('headerSegue').delay(300).animate({
-			height: '80px'
+			height: '100px',
+			'line-height' : '100px'
 		}, 600);
 		
 		setTimeout(function() {
@@ -129,7 +128,9 @@ $(document).ready(function() {
 
 	makeWorks = function() {
 		var worksCanvas = document.createElement('DIV');
-		$(worksCanvas).addClass('worksCanvas');
+		$(worksCanvas).addClass('worksCanvas').css({
+			'padding-top' : '100px'
+		});
 		$('body').append(worksCanvas);
 		
 		for (i in works) {
