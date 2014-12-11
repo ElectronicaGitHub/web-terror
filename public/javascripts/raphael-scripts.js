@@ -1,9 +1,15 @@
 var paper;
 $(document).ready(function() {
-    paper = Raphael(0, 0, "100%", "100%");
+    paper = Raphael(0, 0, "550px", "550px");
 
     $(paper.canvas).css({
-        'z-index' : 3
+        'z-index' : 3,
+        'position' : 'fixed',
+        'margin' : 'auto',
+        top : 0,
+        bottom : 0,
+        left : 0,
+        right : 0
     })  ;
 });
 

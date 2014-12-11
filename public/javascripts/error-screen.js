@@ -178,7 +178,9 @@ var screenOff = function() {
                         });
                         $(div5).animate({
                             width: '400px',
-                        }, 2000);
+                        }, 2000, function() {
+                            $('.wrapper').remove();
+                        });
                     });
                 });
             }); 
