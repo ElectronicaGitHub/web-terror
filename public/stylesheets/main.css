@@ -172,7 +172,7 @@ div[class*=screen-scrapper] {
     margin: 0 auto;
     width: 400px;
     font-family: 'LatoBlack', sans-serif;
-    /*font-weight: 900;*/
+    font-weight: 900;
     height: 50px;
     text-align: center;
     font-size: 50px;
@@ -214,7 +214,7 @@ div[class*=screen-scrapper] {
     font-size: 18px;
     opacity : 0;
     font-family: 'LatoLight', sans-serif;
-    /*font-weight: 200;*/
+    font-weight: normal;
 }
 .works {
     position: absolute;
