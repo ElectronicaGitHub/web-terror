@@ -1,16 +1,16 @@
 var works = [ 
-	{
-		label : 'CASTMAG',
-		background_url : '/images/castmag_preview.jpg',
-		url : 'http://castmag.ru',
-		size : 2
-	},
 	{ 
 		label : 'TVOYKOSMOS',
 		background_url : '/images/tk_preview.jpg',
 		url : 'http://tvoykosmos.ru',
 		size : 1
 	}, 
+	{
+		label : 'CASTMAG',
+		background_url : '/images/castmag_preview.jpg',
+		url : 'http://castmag.ru',
+		size : 2
+	},
 	{
 		label : 'HAIR-REPAIR',
 		background_url : '/images/hr_preview.jpg',
