@@ -20,6 +20,7 @@ var makeRects = function(n, maxtime) {
 };
 
 var makeRect = function(time) {
+    var height = $(window).height();
     var div = document.createElement('DIV');
     $(div).addClass('glitch-block');
     var clr = colors[~~(Math.random() * colors.length-1)];
@@ -29,11 +30,11 @@ var makeRect = function(time) {
     var a = $(div);
     a.text(Math.random() > 0.5 ? 'error' : '');
     a.css({
-        width : left.size + '%',
-        height: ~~(Math.random() * 400) + 'px',
         background : clr,
+        width : left.size + '%',
         left : left.point + '%',
-        top: ~~(Math.random() * 600)
+        top: ~~(Math.random() * height),
+        height: ~~(Math.random() * height/3) + 'px',
     });
     if (Math.random() > 0.8) {
         a.css({
