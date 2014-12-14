@@ -66,6 +66,11 @@ $(document).ready(function() {
 	})
 
 	$('body').on('click', '.works', function() {
+		try {
+			window.yaCounter27477693.reachGoal('works');
+		} catch(e) {
+			console.log('again yandex api error.')
+		}
 		// console.log('works pressed')
 		// segue controller
 		var headerSegue = document.createElement('DIV');
