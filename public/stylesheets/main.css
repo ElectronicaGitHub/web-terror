@@ -1,6 +1,7 @@
 * {
 	padding: 0;
 	margin: 0;
+    letter-spacing: -0.05ex;
 }
 
 body {
@@ -31,7 +32,8 @@ body {
     opacity: 0;
 }
 .title p {
-	font-family: 'LatoBlack', sans-serif;
+    /*font-family: 'LatoBlack', sans-serif;*/
+	font-family: 'open_sansextrabold', sans-serif;
     font-weight: 900;
 }
 .web {
@@ -171,7 +173,8 @@ div[class*=screen-scrapper] {
     position: relative;
     margin: 0 auto;
     width: 400px;
-    font-family: 'LatoBlack', sans-serif;
+    /*font-family: 'LatoBlack', sans-serif;*/
+    font-family: 'open_sansextrabold', sans-serif;
     font-weight: 900;
     height: 50px;
     text-align: center;
@@ -183,7 +186,8 @@ div[class*=screen-scrapper] {
     margin: 0 auto;
     width: 400px;
     height: 50px;
-    font-family: 'LatoLight', sans-serif;
+    /*font-family: 'LatoLight', sans-serif;*/
+    font-family: 'open_sanslight', sans-serif;
     /*font-weight: 300;*/
     font-size: 18px;
     text-align: center;
@@ -202,7 +206,8 @@ div[class*=screen-scrapper] {
     width: 100px;
     margin: 0 auto;
     height: 50px;
-    font-family: 'LatoLight', sans-serif;
+    /*font-family: 'LatoLight', sans-serif;*/
+    font-family: 'open_sanslight', sans-serif;
     /*font-weight: 300;*/
     font-size: 20px;
 }
@@ -213,7 +218,8 @@ div[class*=screen-scrapper] {
     width: 100%;
     font-size: 18px;
     opacity : 0;
-    font-family: 'LatoLight', sans-serif;
+    /*font-family: 'LatoLight', sans-serif;*/
+    font-family: 'open_sanslight', sans-serif;
     font-weight: normal;
 }
 .works {
@@ -222,7 +228,9 @@ div[class*=screen-scrapper] {
     width: 100%;
     opacity : 0;
     font-size: 22px;
-    font-family: 'LatoBlack', sans-serif;
+    /*font-family: 'LatoBlack', sans-serif;*/
+    font-family: 'open_sansextrabold', sans-serif;
+
     /*font-weight: 700;*/
     cursor: pointer;
 }
@@ -255,7 +263,8 @@ div[class*=screen-scrapper] {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
-    font-family: 'LatoBlack', sans-serif;
+    /*font-family: 'LatoBlack', sans-serif;*/
+    font-family: 'open_sansextrabold', sans-serif;
 }
 .worksCanvas {
     width: 100%;
@@ -296,7 +305,8 @@ div[class*=screen-scrapper] {
 }
 
 .eachWork > .fader > span {
-    font-family: 'LatoBlack', sans-serif;
+    /*font-family: 'LatoBlack', sans-serif;*/
+    font-family: 'open_sansextrabold', sans-serif;
     font-size: 60px;
     /*font-weight: 900;*/
     color: white;
@@ -304,5 +314,6 @@ div[class*=screen-scrapper] {
     border-width: 10px 0 10px 0;
 }
 .back {
-    font-family: 'LatoMedium'
+    /*font-family: 'LatoMedium'*/
+    font-family: 'open_sansextrabold', sans-serif;
 }
