@@ -146,7 +146,7 @@ var screenOff = function() {
                             $(phr).text('Комплексные веб решения').addClass('cws');
                             $('.main-view-wtlabel').append(phr);
                             $(phr).animate({
-                                top : '-20px',
+                                top : '-15px',
                                 opacity : 1
                             }, 1000);
                         });
