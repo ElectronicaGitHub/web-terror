@@ -37,13 +37,14 @@ $(document).ready(function() {
 
 	var lang = window.navigator.language || window.navigator.userLanguage;
 
-	rus = lang.match('ru');
+	rus = !lang.match('ru');
 	if (rus) {
 		$('p.web').text('ВЕБ');
 		$('p.web').attr('data-glitch','ВЕБ');
 		$('p.terror').text('ТЕРРОР');
 		$('p.terror').attr('data-glitch', 'ТЕРРОР');
 		$('.main-view-wtlabel').text('ВЕБ ТЕРРОР');
+		document.title = 'Веб-студия ВЕБ ТЕРРОР';
 	}
 
 	$('.title').animate({
