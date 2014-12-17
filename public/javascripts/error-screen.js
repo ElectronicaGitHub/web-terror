@@ -143,7 +143,8 @@ var screenOff = function() {
                             opacity : '1'
                         }, 1000, function() {
                             var phr = document.createElement('DIV');
-                            $(phr).text('Комплексные веб решения').addClass('cws');
+                            var cws = rus ? 'Комплексные веб решения' : 'Complex Web Solutions';
+                            $(phr).text(cws).addClass('cws');
                             $('.main-view-wtlabel').append(phr);
                             $(phr).animate({
                                 top : '-15px',
@@ -155,7 +156,8 @@ var screenOff = function() {
                             opacity : '1'
                         }, 1000, function() {
                             var works = document.createElement('DIV');
-                            $(works).text('Работы').addClass('works');
+                            var wText = rus ? 'Работы' : 'Works';
+                            $(works).text(wText).addClass('works');
                             $('.main-view-contacts').append(works);
                             $(works).animate({
                                 top : '110px',

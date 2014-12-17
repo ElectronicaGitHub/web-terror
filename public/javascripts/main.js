@@ -1,3 +1,4 @@
+var rus;
 var works = [ 
 	{ 
 		label : 'TVOYKOSMOS',
@@ -36,14 +37,13 @@ $(document).ready(function() {
 
 	var lang = window.navigator.language || window.navigator.userLanguage;
 
-	var rus = lang.match('ru');
+	rus = lang.match('ru');
 	if (rus) {
 		$('p.web').text('ВЕБ');
 		$('p.web').attr('data-glitch','ВЕБ');
 		$('p.terror').text('ТЕРРОР');
 		$('p.terror').attr('data-glitch', 'ТЕРРОР');
 		$('.main-view-wtlabel').text('ВЕБ ТЕРРОР');
-		$('.main-view-contacts .phone').text('+7 909 6952723');
 	}
 
 	$('.title').animate({
@@ -97,12 +97,14 @@ $(document).ready(function() {
 		var wtLogoAndBack = document.createElement('SPAN');
 		var wt = document.createElement('P');
 		var back = document.createElement('P');
-		$(wt).text('ВЕБ ТЕРРОР').css({
+		wtText = rus ? 'ВЕБ ТЕРРОР' : 'WEB TERROR';
+		$(wt).text(wtText).css({
 			opacity : 0,
 			'font-size' : '35px',
 			'line-height': '40px'
 		});
-		$(back).text('Вернуться').addClass('back').css({
+		backText = rus ? 'Вернуться' : 'Back'
+		$(back).text(backText).addClass('back').css({
 			opacity : 0,
 			'font-size' : '15px',
 			'line-height' : '20px',
